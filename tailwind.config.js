@@ -3,6 +3,9 @@ export default {
   content: [],
   theme: {
     extend: {
+      screens: {
+        'max-sm': {'max': '489px'}
+      },
       colors: {
         brand: {
           // Accent color: use for highlights, buttons, hover states
