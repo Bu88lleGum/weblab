@@ -20,7 +20,7 @@
       <NuxtLink to="/" class="hover:bg-brand-accent transition bg-brand-primary rounded-xl p-2 duration-500 max-sm:w-full max-sm:text-center">Home</NuxtLink>
       <div class="relative group max-sm:w-full">
         <button @click="switch_labs" class="hover:bg-brand-accent transition bg-brand-primary rounded-xl p-2 duration-500 max-sm:w-full max-sm:text-center">Labs</button>
-        <div v-show="labs" class="absolute left-0 mt-2 hidden flex-col bg-brand-primary text-brand-background_white rounded-xl shadow-lg group-hover:flex z-50 max-sm:relative max-sm:mt-1 max-sm:w-full max-sm:flex">
+        <div v-show="labs" class="absolute left-0 mt-2 flex flex-col bg-brand-primary text-brand-background_white rounded-xl shadow-lg z-50 max-sm:relative max-sm:mt-1 max-sm:w-full">
           <NuxtLink to="/labs" class="px-4 py-2 w-[100px] hover:bg-brand-accent rounded-t-xl max-sm:w-full max-sm:text-center">Lab 3</NuxtLink>
           <NuxtLink to="/lab4" class="px-4 py-2 hover:bg-brand-accent max-sm:w-full max-sm:text-center">Lab 4</NuxtLink>
           <NuxtLink to="/lab5" class="px-4 py-2 hover:bg-brand-accent max-sm:w-full max-sm:text-center">Lab 5</NuxtLink>
@@ -43,7 +43,7 @@
   </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useHead } from "#app"
 import { ref } from "vue"
 
@@ -57,7 +57,6 @@ function switch_burger() {
 function switch_labs() {
   labs.value = !labs.value
 }
-
 useHead({
   script: [
     { async: true, src: "https://www.googletagmanager.com/gtag/js?id=G-QJ83R5NYB7" },
